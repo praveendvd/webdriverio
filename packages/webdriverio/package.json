@@ -68,7 +68,7 @@
     "css-shorthand-properties": "^1.1.1",
     "css-value": "^0.0.1",
     "devtools": "7.19.7",
-    "devtools-protocol": "^0.0.998712",
+    "devtools-protocol": "^0.0.1000974",
     "fs-extra": "^10.0.0",
     "grapheme-splitter": "^1.0.2",
     "lodash.clonedeep": "^4.5.0",
@@ -80,7 +80,7 @@
     "query-selector-shadow-dom": "^1.0.0",
     "resq": "^1.9.1",
     "rgb2hex": "0.2.5",
-    "serialize-error": "^8.0.0",
+    "serialize-error": "^10.0.0",
     "webdriver": "7.19.7"
   }
 }
