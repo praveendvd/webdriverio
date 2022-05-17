@@ -13,7 +13,7 @@ import { ReplCommandArguments, Questionnair, SupportedPackage, OnCompleteResult,
 import { EXCLUSIVE_SERVICES, ANDROID_CONFIG, IOS_CONFIG, QUESTIONNAIRE } from './constants'
 import { ConfigParser } from '@wdio/config'
 import pickBy from 'lodash.pickby'
-//import { VALID_CAPS } from '@wdio/protocols'
+import { VALID_CAPS } from '@wdio/protocols'
 
 const log = logger('@wdio/cli:utils')
 
@@ -305,7 +305,7 @@ export function getCapabilities(arg: ReplCommandArguments) {
         }
         requiredCaps = (requiredCaps as (Capabilities.DesiredCapabilities | Capabilities.W3CCapabilities)[])[Number(arg.capabilities)] ||
                 (requiredCaps as Capabilities.MultiRemoteCapabilities)[arg.capabilities]
-        const requiredW3CCaps = pickBy(requiredCaps, (_, key) => key.includes(':'))
+        const requiredW3CCaps = pickBy(requiredCaps, (_, key) => VALID_CAPS.includes(key) || key.includes(':'))
         if (!Object.keys(requiredW3CCaps).length) {
             throw Error(`No capability found in given config file with the provided capability indexed/named property: ${arg.capabilities}. Please check the capability in your wdio config file.`)
         }
