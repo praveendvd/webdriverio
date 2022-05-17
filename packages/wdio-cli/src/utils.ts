@@ -13,7 +13,7 @@ import { ReplCommandArguments, Questionnair, SupportedPackage, OnCompleteResult,
 import { EXCLUSIVE_SERVICES, ANDROID_CONFIG, IOS_CONFIG, QUESTIONNAIRE } from './constants'
 import { ConfigParser } from '@wdio/config'
 import pickBy from 'lodash.pickby'
-import { VALID_CAPS } from '@wdio/protocols'
+//import { VALID_CAPS } from '@wdio/protocols'
 
 const log = logger('@wdio/cli:utils')
 
